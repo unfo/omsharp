@@ -34,7 +34,7 @@ namespace omsharp
             var nick = argQueue.Dequeue();
             var server = argQueue.Dequeue();
             var port = int.Parse(argQueue.Dequeue());
-            var chans = argQueue.Select(chan => chan).ToList();
+            var chans = argQueue.ToList();
 
             var client = new TcpClient(server, port);
             var stream = client.GetStream();
